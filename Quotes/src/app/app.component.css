@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: auto, 0;
+    color: black;
+}
+
+h1{
+    font-size: 60px;
+    color: blue;
+    text-align: center;
+    border-bottom: 2px solid blue;
+}
+
+h4{
+    color: blue;
+    font-size: 30px;
+    font-weight: 500;
+}
