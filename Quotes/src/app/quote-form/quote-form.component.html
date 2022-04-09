@@ -1,3 +1,41 @@
+<div class="container-fluid">
+    <hr>
+    <form #quoteForm = "ngForm">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="quote">Quote</label>
+            <textarea class="form-control" id="quote" rows="4"  [(ngModel)]="newquote.quote" name="quote" #quote="ngModel" required></textarea>
+            <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+                <p>The Quote is required</p>
+            </div>     
+        </div>
+
+        <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" class="form-control" id="author" [(ngModel)]="newquote.author" name="author" #author='ngModel' required>
+            <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                <p>Author is required</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="complete">Date Created</label>
+            <input type='date' id="complete" [(ngModel)]="newquote.completeDate" name="completeDate" #completeDate="ngModel" required>
+          <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
+            <p>Date is required</p>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-success">Add Quote</button>
+    </form>
+</div>
+
+
+
+
 <!-- <div class="container-fluid">
     <h2 class="text-center">Add your own Quote</h2>
     <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
