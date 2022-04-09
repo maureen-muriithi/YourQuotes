@@ -9,12 +9,12 @@ import { Quote } from '../quote';
 export class QuotesComponent implements OnInit {
 
   quotes: Quote[] = [
-    new Quote(1, "The future belongs to those who believe in the beauty of their dreams. ", "-Eleanor Roosevelt", 0, 0, ),
-    new Quote(2, "It is during our darkest moments that we must focus to see the light. ", "-Aristotle", 0, 0),
-    new Quote(3, "Life is either a daring adventure or nothing at all. ", "-Helen Keller", 0, 0),
-    new Quote(4, "You will face many defeats in life, but never let yourself be defeated." , "-Maya Angelou", 0, 0),
-    new Quote(5, "Love the life you live. Live the life you love.", " -Bob Marley", 0, 0),
-    new Quote(6, "Everything you've ever wanted is on the other side of fear.", "-George Addair", 0, 0)
+    new Quote(1, "'The future belongs to those who believe in the beauty of their dreams.' ", "Eleanor Roosevelt", 0, 0, ),
+    new Quote(2, "'It is during our darkest moments that we must focus to see the light.' ", "Aristotle", 0, 0),
+    new Quote(3, "'Life is either a daring adventure or nothing at all.' ", "Helen Keller", 0, 0),
+    new Quote(4, "'You will face many defeats in life, but never let yourself be defeated.' " , "Maya Angelou", 0, 0),
+    new Quote(5, "'Love the life you live. Live the life you love.' ", " Bob Marley", 0, 0),
+    new Quote(6, "'Everything you've ever wanted is on the other side of fear.'", "George Addair", 0, 0)
   ]
 
   toggleDetails(index: any){
