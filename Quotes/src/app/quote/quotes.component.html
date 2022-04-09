@@ -1,0 +1,15 @@
+<div *ngFor='let quote of quotes;let i = index'>
+    <div>
+        {{ quote.quote}}
+        <span class="text-primary ml-3" >{{ quote.upvotes}}</span>
+        <span class="text-warning ml-3">{{ quote.downvotes}}</span>
+      <!-- <h6 id={{i}} appStrikethrough>{{goal.name}} due on {{goal.completeDate|date|uppercase}}</h6> -->
+      <h6 id={{i}}></h6>
+      <button (click)='toggleDetails(i)' class="btn btn-primary">More Details</button>
+    </div>
+    <br>
+    <div class="text-center" *ngIf='quote.showDetails'>
+      <app-quote-details  [quote]='quote' (isMediocre) = 'deleteQuote($event,i)'></app-quote-details>
+    </div>
+</div>
+<br>
