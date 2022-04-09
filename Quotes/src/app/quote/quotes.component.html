@@ -30,10 +30,11 @@
       <!-- <h6 id={{i}} appStrikethrough>{{goal.name}} due on {{goal.completeDate|date|uppercase}}</h6> -->
       <h6 id={{i}}></h6>
       <button (click)='toggleDetails(i)' class="btn btn-primary">More Details</button>
-    <br>
+    <br><br>
     <div class="text-center" *ngIf='quote.showDetails'>
       <app-quote-details  [quote]='quote' (isMediocre) = 'deleteQuote($event,i)'></app-quote-details>
     </div>
 </div>
+<br>
 
 
