@@ -6,7 +6,7 @@ import { Quote } from './quote';
 })
 export class DaysCheckerPipe implements PipeTransform {
 
-  transform(value: any): any {
+  transform(value: any): number {
   let currentday:Date = new Date(); //get current date and time
   let currentdate:any = new Date(currentday.getFullYear(), currentday.getMonth(), currentday.getDate())
   var dateDifference = Math.abs(value - currentdate) //returns value in miliseconds

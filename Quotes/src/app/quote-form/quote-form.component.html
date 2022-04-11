@@ -1,6 +1,6 @@
 <div class="container-fluid">
-    <hr style="background-color: blue;">
-    <form (ngSubmit) = "submitQuote()" #quoteForm = "ngForm">
+    <hr style="background-color: rgba(8, 45, 253, 0.89); height: 5px;">
+    <form (ngSubmit) = "submitQuote();" #quoteForm = "ngForm">
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name='ngModel' placeholder="Enter your name"  required>
@@ -37,7 +37,7 @@
         <button id="submitbtn" type="submit" class="btn btn-primary">Add Quote</button>
         <!-- <button id="resetbtn" type="reset" class="btn btn-success" id="reset-btn" ng-click="resetForm()">Reset</button>  -->
 
-        <hr style="background-color: blue;" >
+        <hr style="background-color: rgba(8, 45, 253, 0.89); height: 5px;" >
 
         <h6>For more info:</h6>
         <div class="inline-ul text-center d-flex justify-content-center" id="Contact-icons" >

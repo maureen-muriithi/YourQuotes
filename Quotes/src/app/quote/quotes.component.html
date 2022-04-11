@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-7">
     <h4>Quotes</h4>
-    <hr style="background-color: blue;">
+    <hr style="background-color: rgba(8, 45, 253, 0.89); height: 5px;">
     <div *ngFor='let quote of quotes;let i = index; let a = index'>
       <div *ngIf = "i == highestQuote && quote.totalVotes > 0; then highlight else ignore" appHighlight ></div>
       <ng-template #highlight>
