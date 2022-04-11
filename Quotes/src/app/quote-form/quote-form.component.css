@@ -4,6 +4,10 @@
     
 }
 
+#submitbtn, #resetbtn{
+    padding: 10px;
+}
+
 h6{
     font-size: small;
     font-style: italic;
