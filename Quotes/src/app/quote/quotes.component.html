@@ -16,7 +16,7 @@
       </ng-template>
 
       <ng-template #ignore>
-        <p id="quote">{{ quote.quote}}</p>
+        <p id="quote">"{{ quote.quote}}"</p>
           <button (click) ="quote.upvote = quote.upvote + 1" (click) = 'upvote(a)' (click)='calculateHighestVotes()' style="font-size:18px;color:blue; padding-left: 5px;">
             <i class="fa fa-thumbs-up" aria-hidden="true"></i>
             <span class="text-primary ml-3" >{{ quote.upvote}}</span>
@@ -37,7 +37,7 @@
     </div>
     <br>
   </div>
-  
+
   <div class="col-md-5">
     <h4 class="text-center">Add Your Quote</h4>
     <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
