@@ -2,7 +2,7 @@
 
 > This is a web app that has quotes and allows you to add your favorite quotes as well.
 > was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
-> Live demo [ ]
+> Live demo [ https://maureen-muriithi.github.io/YourQuotes/]
 
 ### Project Contributor
 
