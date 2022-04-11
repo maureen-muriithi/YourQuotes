@@ -1,26 +1,26 @@
 <div *ngFor='let quote of quotes;let i = index; let a = index'>
   <div *ngIf = "i == highestQuote && quote.totalVotes > 0; then highlight else ignore" appHighlight ></div>
       <ng-template #highlight>
-        <p appHighlight>{{ quote.quote}}</p>
-          <button (click) ="quote.upvote = quote.upvote + 1" (click) = 'upvote(a)' (click)='calculateHighestVotes()'   style="font-size:24px;color:blue;">
+        <p id="quote" appHighlight>{{ quote.quote}}</p>
+          <button (click) ="quote.upvote = quote.upvote + 1" (click) = 'upvote(a)' (click)='calculateHighestVotes()'   style="font-size:18px;color:blue;">
               <i class="fa fa-thumbs-up" aria-hidden="true"></i>
               <span class="text-primary ml-3" >{{ quote.upvote}}</span>
           </button>
 
-          <button (click) ="quote.downvote = quote.downvote + 1"  (click) = 'downvote(i)' (click)='calculateHighestVotes()' style="font-size:24px;color:red;">
+          <button (click) ="quote.downvote = quote.downvote + 1"  (click) = 'downvote(i)' (click)='calculateHighestVotes()' style="font-size:18px;color:red;">
               <i class="fa fa-thumbs-down" aria-hidden="true"></i>
               <span class="text-warning ml-3">{{ quote.downvote}}</span>
           </button>
       </ng-template>
 
       <ng-template #ignore>
-        <p>{{ quote.quote}}</p>
-          <button (click) ="quote.upvote = quote.upvote + 1" (click) = 'upvote(a)' (click)='calculateHighestVotes()' style="font-size:24px;color:blue; padding-left: 5px;">
+        <p id="quote">{{ quote.quote}}</p>
+          <button (click) ="quote.upvote = quote.upvote + 1" (click) = 'upvote(a)' (click)='calculateHighestVotes()' style="font-size:18px;color:blue; padding-left: 5px;">
               <i class="fa fa-thumbs-up" aria-hidden="true"></i>
               <span class="text-primary ml-3" >{{ quote.upvote}}</span>
           </button>
 
-          <button (click) ="quote.downvote = quote.downvote + 1"  (click) = 'downvote(i)' (click)='calculateHighestVotes()' style="font-size:24px;color:red;">
+          <button (click) ="quote.downvote = quote.downvote + 1"  (click) = 'downvote(i)' (click)='calculateHighestVotes()' style="font-size:18px;color:red;">
               <i class="fa fa-thumbs-down" aria-hidden="true"></i>
               <span class="text-warning ml-3">{{ quote.downvote}}</span>
           </button>
@@ -29,7 +29,7 @@
 
       <!-- <h6 id={{i}} appStrikethrough>{{goal.name}} due on {{goal.completeDate|date|uppercase}}</h6> -->
       <h6 id={{i}}></h6>
-      <button (click)='toggleDetails(i)' class="btn btn-primary">More Details</button>
+      <button (click)='toggleDetails(i)' class="btn btn-primary">See More Details</button>
     <br><br>
     <div class="text-center" *ngIf='quote.showDetails'>
       <app-quote-details  [quote]='quote' (isMediocre) = 'deleteQuote($event,i)'></app-quote-details>

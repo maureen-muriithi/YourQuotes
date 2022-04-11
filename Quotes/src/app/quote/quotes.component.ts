@@ -9,12 +9,10 @@ import { Quote } from '../quote';
 export class QuotesComponent implements OnInit {
 
   quotes: Quote[] = [
-    new Quote(1, "'The future belongs to those who believe in the beauty of their dreams.' ", "Eleanor Roosevelt", 0, 0, 0, new Date(2022,1,1)),
-    new Quote(2, "'It is during our darkest moments that we must focus to see the light.' ", "Aristotle", 0, 0, 0, new Date (2022,1,2)),
-    new Quote(3, "'Life is either a daring adventure or nothing at all.' ", "Helen Keller", 0, 0, 0, new Date (2022,1,3)),
-    new Quote(4, "'You will face many defeats in life, but never let yourself be defeated.' " , "Maya Angelou", 0, 0, 0, new Date (2022,1,4)),
-    new Quote(5, "'Love the life you live. Live the life you love.' ", " Bob Marley", 0, 0, 0, new Date (2022,1,5)),
-    new Quote(6, "'Everything you've ever wanted is on the other side of fear.'", "George Addair", 0, 0, 0, new Date (2022,1,6))
+    new Quote(1, "Maureen", "'The future belongs to those who believe in the beauty of their dreams.' ", "Eleanor Roosevelt", 0, 0, 0, new Date(2022,1,1)),
+    new Quote(2, "Maya", "'It is during our darkest moments that we must focus to see the light.' ", "Aristotle", 0, 0, 0, new Date (2022,1,2)),
+    new Quote(3, "Milan", "'Life is either a daring adventure or nothing at all.' ", "Helen Keller", 0, 0, 0, new Date (2022,1,3)),
+    new Quote(4, "Trevor", "'You will face many defeats in life, but never let yourself be defeated.' " , "Maya Angelou", 0, 0, 0, new Date (2022,1,4)),
   ]
 
   toggleDetails(index: any){
@@ -69,9 +67,6 @@ upvote(a:any){
   addNewQuote(quote: Quote){
     let quoteLength = this.quotes.length;
     quote.id = quoteLength+1;
-    quote.upvote = 0;
-    quote.downvote = 0;
-    quote.totalVotes = 0;
     quote.completeDate = new Date(quote.completeDate)
     this.quotes.push(quote)
   }
