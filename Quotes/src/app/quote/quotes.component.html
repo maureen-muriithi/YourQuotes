@@ -31,7 +31,7 @@
       <h6 id={{i}}></h6>
       <button (click)='toggleDetails(i)' class="btn btn-primary">See More Details</button>
     <br><br>
-    <div class="text-center" *ngIf='quote.showDetails'>
+    <div class="moreDetails" *ngIf='quote.showDetails'>
       <app-quote-details  [quote]='quote' (isMediocre) = 'deleteQuote($event,i)'></app-quote-details>
     </div>
 </div>

@@ -7,3 +7,9 @@ button{
     font-style: italic;
     padding-top: 10px;
 }
+
+.moreDetails{
+    padding-left: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+}

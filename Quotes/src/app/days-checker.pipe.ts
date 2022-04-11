@@ -6,24 +6,18 @@ import { Quote } from './quote';
 })
 export class DaysCheckerPipe implements PipeTransform {
 
-  transform(value: any): any {}}
-    // let fullDate: Date = new Date()
-    // let currentDay: any = new Date (fullDate.getFullYear(), fullDate.getMonth(), fullDate.getDate())
-    // let inputDay: any = {{quote.completeDate|date}}
-    // var daysDifference = Math.abs(currentDay-InputDay)
-    // return null;
+  transform(value: any): any {
+  let currentday:Date = new Date(); //get current date and time
+  let currentdate:any = new Date(currentday.getFullYear(), currentday.getMonth(), currentday.getDate())
+  var dateDifference = Math.abs(value - currentdate) //returns value in miliseconds
+  const secondsInDay = 86400; //60 seconds * 60 minutes in an hour * 24 hours in a day
+  var dateDifferenceSeconds = dateDifference*0.001; //converts miliseconds to seconds
+  var daysChecker = dateDifferenceSeconds/secondsInDay;
 
-//     var inputDate: Date = new Date{{quote.completeDate|date}}
-//     var currentdate:any = new Date();
-//     var diffDays:any = Math.floor((currentdate - inputDate) / (1000 * 60 * 60 * 24));
-
-//     return diffDays;
-
-//     if (diffDays >= 1 && inputDate < currentdate){
-//       return diffDays;
-//     }else{
-//       return 0;
-//     }
-//   }
-
-// }
+  if (daysChecker >= 1 && value < currentdate){
+    return daysChecker;
+  }else{
+    return 0;
+  }
+}
+}
