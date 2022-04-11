@@ -1,41 +1,46 @@
-<div *ngFor='let quote of quotes;let i = index; let a = index'>
-  <div *ngIf = "i == highestQuote && quote.totalVotes > 0; then highlight else ignore" appHighlight ></div>
+<div class="row">
+  <div class="col-md-7">
+    <div *ngFor='let quote of quotes;let i = index; let a = index'>
+      <div *ngIf = "i == highestQuote && quote.totalVotes > 0; then highlight else ignore" appHighlight ></div>
       <ng-template #highlight>
         <p id="quote" appHighlight>{{ quote.quote}}</p>
           <button (click) ="quote.upvote = quote.upvote + 1" (click) = 'upvote(a)' (click)='calculateHighestVotes()'   style="font-size:18px;color:blue;">
-              <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-              <span class="text-primary ml-3" >{{ quote.upvote}}</span>
+            <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+            <span class="text-primary ml-3" >{{ quote.upvote}}</span>
           </button>
 
           <button (click) ="quote.downvote = quote.downvote + 1"  (click) = 'downvote(i)' (click)='calculateHighestVotes()' style="font-size:18px;color:red;">
-              <i class="fa fa-thumbs-down" aria-hidden="true"></i>
-              <span class="text-warning ml-3">{{ quote.downvote}}</span>
+            <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+            <span class="text-warning ml-3">{{ quote.downvote}}</span>
           </button>
       </ng-template>
 
       <ng-template #ignore>
         <p id="quote">{{ quote.quote}}</p>
           <button (click) ="quote.upvote = quote.upvote + 1" (click) = 'upvote(a)' (click)='calculateHighestVotes()' style="font-size:18px;color:blue; padding-left: 5px;">
-              <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-              <span class="text-primary ml-3" >{{ quote.upvote}}</span>
+            <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+            <span class="text-primary ml-3" >{{ quote.upvote}}</span>
           </button>
 
           <button (click) ="quote.downvote = quote.downvote + 1"  (click) = 'downvote(i)' (click)='calculateHighestVotes()' style="font-size:18px;color:red;">
-              <i class="fa fa-thumbs-down" aria-hidden="true"></i>
-              <span class="text-warning ml-3">{{ quote.downvote}}</span>
+            <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+            <span class="text-warning ml-3">{{ quote.downvote}}</span>
           </button>
       </ng-template>
-      
-
-      <!-- <h6 id={{i}} appStrikethrough>{{goal.name}} due on {{goal.completeDate|date|uppercase}}</h6> -->
+    
       <h6 id={{i}}></h6>
       <button (click)='toggleDetails(i)' class="btn btn-primary">See More Details</button>
-    <br><br>
-    <div class="moreDetails" *ngIf='quote.showDetails'>
-      <app-quote-details  [quote]='quote' (isMediocre) = 'deleteQuote($event,i)'></app-quote-details>
+      <br><br>
+      <div class="moreDetails" *ngIf='quote.showDetails'>
+        <app-quote-details  [quote]='quote' (isMediocre) = 'deleteQuote($event,i)'></app-quote-details>
+      </div>
     </div>
+    <br>
+  </div>
+  <div class="col-md-5">
+    <h4 class="text-center">Add Your Quote</h4>
+    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+  </div>
 </div>
-<br>
-
 
 

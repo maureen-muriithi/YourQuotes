@@ -49,27 +49,15 @@ upvote(a:any){
   this.quotes[a].totalVotes +=1;
 }
 
-
-  // public addCount(id:number){
-  //   .upvotes-btn.ngClick = function () {
-  //     this.quotes[index].upvotes++;
-  // }
-  // }
-
-  // public addCount(id: number){
-  //   let idx= this.quotes.findIndex(el => el.id == id);
-  //   this.quotes[idx].upvotes++;
-  // }
-
-  arr:number[] = this.quotes.map(quote=>quote.totalVotes)
+arr:number[] = this.quotes.map(quote=>quote.totalVotes)
   highest = Math.max(...this.arr)
 
-  addNewQuote(quote: Quote){
-    let quoteLength = this.quotes.length;
-    quote.id = quoteLength+1;
-    quote.completeDate = new Date(quote.completeDate)
-    this.quotes.push(quote)
-  }
+addNewQuote(quote: Quote){
+  let quoteLength = this.quotes.length;
+  quote.id = quoteLength+1;
+  quote.completeDate = new Date(quote.completeDate)
+  this.quotes.push(quote)
+}
 
   constructor() { }
 
