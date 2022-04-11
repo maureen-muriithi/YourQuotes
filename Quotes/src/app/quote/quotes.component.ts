@@ -9,10 +9,10 @@ import { Quote } from '../quote';
 export class QuotesComponent implements OnInit {
 
   quotes: Quote[] = [
-    new Quote(1, "Maureen", "'The future belongs to those who believe in the beauty of their dreams.' ", "Eleanor Roosevelt", 0, 0, 0, new Date(2022,1,1)),
-    new Quote(2, "Maya", "'It is during our darkest moments that we must focus to see the light.' ", "Aristotle", 0, 0, 0, new Date (2022,1,2)),
-    new Quote(3, "Milan", "'Life is either a daring adventure or nothing at all.' ", "Helen Keller", 0, 0, 0, new Date (2022,1,3)),
-    new Quote(4, "Trevor", "'You will face many defeats in life, but never let yourself be defeated.' " , "Maya Angelou", 0, 0, 0, new Date (2022,1,4)),
+    new Quote(1, "Maureen", "The future belongs to those who believe in the beauty of their dreams.", "Eleanor Roosevelt", 0, 0, 0, new Date(2022,1,1)),
+    new Quote(2, "Maya", "It is during our darkest moments that we must focus to see the light.", "Aristotle", 0, 0, 0, new Date (2022,1,2)),
+    new Quote(3, "Milan", "Life is either a daring adventure or nothing at all.", "Helen Keller", 0, 0, 0, new Date (2022,1,3)),
+    new Quote(4, "Trevor", "You will face many defeats in life, but never let yourself be defeated." , "Maya Angelou", 0, 0, 0, new Date (2022,1,4)),
   ]
 
   toggleDetails(index: any){
