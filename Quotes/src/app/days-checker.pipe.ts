@@ -7,12 +7,12 @@ import { Quote } from './quote';
 export class DaysCheckerPipe implements PipeTransform {
 
   transform(value: any): number {
-  let currentday:Date = new Date(); //get current date and time
+  let currentday:Date = new Date();
   let currentdate:any = new Date(currentday.getFullYear(), currentday.getMonth(), currentday.getDate())
-  var dateDifference = Math.abs(value - currentdate) //returns value in miliseconds
-  const secondsInDay = 86400; //60 seconds * 60 minutes in an hour * 24 hours in a day
-  var dateDifferenceSeconds = dateDifference*0.001; //converts miliseconds to seconds
-  var daysChecker = dateDifferenceSeconds/secondsInDay;
+  var dateDifference = Math.abs(value - currentdate) 
+  const secondsInDay = 86400
+  var dateDiffiInSecs = dateDifference * 0.001
+  var daysChecker = dateDiffiInSecs/secondsInDay;
 
   if (daysChecker >= 1 && value < currentdate){
     return daysChecker;

@@ -8,7 +8,6 @@ export class Quote {
     downvote:number;
     totalVotes: number;
     completeDate: Date;
-  static completeDate: string | number | Date;
     
     constructor(id:number, name: string, quote:string, author:string, upvote:number, downvote:number, totalVotes: number, completeDate:Date,){
         this.id = id;
