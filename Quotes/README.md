@@ -35,7 +35,7 @@ I have no any known bugs.
 
 #### Setup Requirements / Installation
 - A lapto, tab or phone
-- click thE link above and open it with your preferred browser
+- click the link above and open it with your preferred browser
 - Read the quotes available.
 - upvote for the inspirational quotes or downvote the terrible quotes.
 - Enter your name and quote details, to add your own quote.
